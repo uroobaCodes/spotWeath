@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About spotWeath</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav id="nav">
+            <div class="nav-center">
+              <!-- nav header -->
+              <div class="nav-header">
+                <img src="logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+              </div> <!--nav header in nav-center and nav-->
+              <!-- links in nav center and nav-->
+              <div class="links-container">
+                <ul class="links">
+                  <li>
+                    <a href="../3-day/3-day.html" class="scroll-link" id="getForecastBtn">3-day</a>
+                  </li>
+                  <li>
+                    <a href="../index.html" class="scroll-link">home</a>
+                  </li>
+                </ul>
+              </div> <!--links container-->
+            </div> <!--nav center-->
+          </nav>
+    </header>
+
+    <main> <!--grid-->
+        <section class="questions"> 
+          <!-- section-center has questions while section "questions" is parent -->
+            <div class="section-center">
+              <div class="title">
+                  <h2>general questions</h2>
+              </div>
+
+        <!-- single question -->
+        <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>about spotWeath</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                SpotWeath is an app that fetches your coordinates and displays your location on the map, along with the weather in your city. To use this app, simply allow the browser to access your coordinates.
+              </p>
+            </div>
+          </article>
+          <!-- end of single question -->
+
+                  <!-- single question -->
+        <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>what are some of the technical details behind spotWeath</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+            <p>
+                SpotWeath is built using HTML, CSS, and JavaScript without any frameworks. It utilizes the Geolocation Web API, LocationIQ API, and WeatherAPI, as well as the JavaScript library Leaflet to render the map.              
+            </p>
+            </div>
+          </article>
+          <!-- end of single question -->
+
+                  <!-- single question -->
+        <article class="question">
+            <!-- question title -->
+            <div class="question-title">
+              <p>about uroobaCodes</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="far fa-plus-square"></i>
+                </span>
+                <span class="minus-icon">
+                  <i class="far fa-minus-square"></i>
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                I am Urooba, and I have been learning to code since May 2023, although I started dabbling in coding in February of the same year. I can now create simple websites and have learned React and Redux through Codecademy. However, I have not yet used them to create projects, which is exactly what I will be doing next.
+              </p>
+            </div>
+          </article>
+          <!-- end of single question -->
+
+            </div> <!--section center-->
+
+        </section> <!--questions -->
+
+        <section class="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm" method="POST" netlify>
+
+                <div class="form-group">
+
+                  <div class="name-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required/>
+                  </div>
+
+                  <div class="occupation-group">
+                    <label for="occupation">Title</label>
+                    <input type="text" id="occupation" name="occupation" required/>
+                  </div>
+
+                </div> <!--name and occupation group-->
+                
+                <div class="form-group">
+
+                  <div class="email-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+
+                  <!-- <div class="company-position-group">
+                    <label for="position">Title</label>
+                    <input type="text" id="position" name="position" />
+                  </div> -->
+                  
+                  <div class="twitter-group">
+                    <label for="twitter">Twitter</label>
+                    <input type="url" id="twitter" name="twitter" />
+                  </div>
+
+                </div> <!--email and twitter group -->
+
+
+        
+                <div class="form-group">
+
+                  <div class="linkedin-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="url" id="linkedin" name="linkedin" />
+                  </div>
+                </div> <!-- linkedin group-->
+
+                <div class="form-group-text-area">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Purpose of contact in 100 words" class="text-area"></textarea>
+                </div> <!--form group text area-->
+
+                <div class="button-group">
+                  <div class="word-count">
+                    <p class="real-time"></p>
+                    <p class="total">/100</p>
+                  </div>
+                  <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+        
+    </main>
+
+    <!-- footer  -->
+<footer> <!-- grid-->
+<div class="form-parent"> <!-- flex -->
+  <!-- item one -->
+  <form action="/submit" method="POST" class="form" netlify>
+    <label for="email" class="form-email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="email" placeholder="Stay in touch" class="form-input" aria-label="Enter your email" required>
+    <button type="submit" class="form-btn">Submit</button>
+  </form>
+  <!-- success message -->
+    <div class="success-msg"><p>Thank you</p></div>
+  <!-- item two -->
+  <div class="contact-me">
+    <p>
+      Contact me on my <a href="mailto:urooba.codes@gmail.com?subject=Hello%20there&body=I%20would%20like%20to%20know...">Email</a>,
+      <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank">LinkedIn</a> and <a href="https://dev.to/uroobacodes" target="_blank">Dev.to profile</a>
+    </p>           
+</div>
+</div> <!-- form parent end-->
+
+
+<div class="urooba-codes"> <!-- flex -->
+  <div class="icon-container"> <!--flex-->
+    <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://dev.to/uroobacodes" target="_blank"><i class="fa-brands fa-dev"></i></a>
+</div>
+  <div class="trademark">
+    <p>uroobaCodes&trade; <span class="date-year">2024</span></p>
+</div>
+
+</footer>
+
+
+    <script src="about.js"></script>
+</body>
+</html>
+

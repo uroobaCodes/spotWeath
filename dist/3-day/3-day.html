@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Day Forecast</title>
+    <link rel="stylesheet" href="3-day.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+        <header>
+          <div class="parallax-container">
+            <div class="header-container">
+                <div class="img-container"></div>
+                <div class="heading-container">
+                    <p class="heading">your 3-day forecast below
+                        <span class="detail">Find out temperature, UV, humidity, and wind speeds for your location. If you haven't already, please click the <span class="detail-span">"find my coordinates"</span> button on the homepage to see your forecast. <br> <a href="../index.html" class="detail-anchor">take me home.</a>
+                    </span>
+                    </p>
+                </div>
+                <div class="opacity-container"></div>
+                <div class="caret-container">
+                    <a type="button" class="caret"><i class="fa-solid fa-angle-down"></i></a>
+                </div>
+            </div> <!--header container-->       
+        </div> <!--parallax container-->
+      </header>      
+        <div class="second-section">
+
+          <div class="three-day-dates">
+            <p><span class="month-one"></span><span class="date-one"></span> — <span class="month-two"></span><span class="date-two"></span></p>
+          </div>
+
+          <!-- <div class="moon">
+            <img src="moon.png" alt="moon">
+          </div>
+
+          <div class="satellite">
+            <img src="satellite.png" alt="satellite">
+          </div> -->
+
+          <div class="child"> <!--grid-->
+           
+ <!-- I am taking the three containers in my notes rather. Because it is rendering it. -->
+          
+          </div> <!--child end-->
+
+          <footer> <!-- grid-->
+            <div class="form-parent"> <!-- flex -->
+              <!-- item one -->
+              <form action="/submit" method="POST" class="form" netlify>
+                <label for="email" class="form-email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="Stay in touch" class="form-input" aria-label="Enter your email" required>
+                <button type="submit" class="form-btn">Submit</button>
+              </form>
+              <!-- success message -->
+               <div class="success-msg"><p>Thank you</p></div>
+              <!-- item two -->
+              <div class="contact-me">
+                <p>
+                  Contact me on my <a href="mailto:urooba.codes@gmail.com?subject=Hello%20there&body=I%20would%20like%20to%20know...">Email</a>,
+                  <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank">LinkedIn</a> and <a href="https://dev.to/uroobacodes" target="_blank">Dev.to profile</a>
+                </p>           
+              </div>
+            </div> <!-- form parent end-->
+
+
+            <div class="urooba-codes"> <!-- flex -->
+              <div class="icon-container"> <!--flex-->
+                <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://dev.to/uroobacodes" target="_blank"><i class="fa-brands fa-dev"></i></a>
+              </div>
+              <div class="trademark">
+                <p>uroobaCodes&trade; <span class="date-year">2024</span></p>
+            </div>
+
+          </footer>
+                  
+
+        </div> <!--second section end-->
+     
+        <nav id="navbar" class="navbar">
+          <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+              <a href="../index.html"><img src="../logo.png" class="logo" alt="logo" /></a>
+              <button class="nav-toggle">
+                  <i class="fa-solid fa-bars"></i>
+              </button>
+            </div> <!--nav header in nav-center and nav-->
+            <!-- links in nav center and nav-->
+            <div class="links-container">
+              <ul class="links">
+                <li>
+                  <a href="../index.html" class="scroll-link">home</a>
+                </li>
+                <li>
+                  <a href="../about/about.html" class="scroll-link">about</a>
+                </li>
+              </ul>
+            </div> <!--links container-->
+          </div> <!--nav center-->
+        </nav>
+
+
+      <script type="module" src="3-day.js"></script>
+</body>
+</html>

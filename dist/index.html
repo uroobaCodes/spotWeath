@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotWeath</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<body>
+   
+    <!-- header -->
+     <header id="home">
+        <nav id="nav">
+            <div class="nav-center">
+              <!-- nav header -->
+              <div class="nav-header">
+                <img src="logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+              </div> <!--nav header in nav-center and nav-->
+              <!-- links in nav center and nav-->
+              <div class="links-container">
+                <ul class="links">
+                  <li>
+                    <a href="./3-day/3-day.html" class="scroll-link" id="getForecastBtn">3-day</a>
+                  </li>
+                  <li>
+                    <a href="./about/about.html" class="scroll-link">about</a>
+                  </li>
+                </ul>
+              </div> <!--links container-->
+            </div> <!--nav center-->
+          </nav>
+
+          <div class="my-coordinates">
+            <div class="container">
+              <h1>your coordinates and weather</h1>
+              <p class="coordinates">
+                latitude<span class="lat">**********</span> longitude<span class="long">**********</span>
+              </p>
+              <p class="address">your address will appear here!</p>
+              <button type="button" class="scroll-link btn btn-white">find my coordinates</button>
+            </div>
+          </div>
+     </header>
+
+     <!-- Second View -->
+     <div class="sticky-container">
+      <div class="sticky-bar"><p>current weather and your maps</p></div>
+      <div class="weather-map-parent">
+
+        <div class="today-weather-parent"> 
+          <div class="current-time-parent">
+            <p>today's weather</p>
+            <div class="current-time"><p>00:00</p></div>
+          </div>
+          <div class="underline"></div>
+
+          <div class="today-weather">
+
+            <!-- large has two containers: condition-design and condition-text-->
+            <div class="large">
+              <div class="condition-design">
+                <div class="condition-icon">
+                  <img src="" alt="weather icon">
+                </div>
+                <div class="condition-num"><p>00</p></div>
+                <div class="condition-celsius"><p>°C</p></div>
+              </div> <!-- condition design -->
+              <div class="condition-text">
+                <p>click the button</p>
+              </div>
+            </div> <!--large ending-->
+
+            <div class="small">
+              <!--wind-->
+              <div class="day">
+                <div class="text"><p>wind</p></div>
+                <div class="value"><p>00kph</p></div>
+              </div>
+
+              <!--max temp-->
+              <div class="day">
+                <div class="text"><p>humidity</p></div>
+                <div class="value"><p>0</p></div>
+              </div>
+
+              <!--uv-->
+              <div class="day">
+                <div class="uv-text"><p>uv</p></div>
+                <div class="uv-value"><p><a href="#uv-info">0</a></p></div>
+                
+              </div>
+
+            </div> <!-- small container ends-->
+          </div> <!-- today weather container -->
+        </div> <!-- weather map parent -->
+        
+        <div class="map-parent">
+          <div id="map"></div>
+        </div>
+        
+      </div> <!--weather map parent with display flex for large screens-->
+     </div> <!--sticky container end-->
+
+     <!-- Third View -->
+<div class="carousel-container">
+
+  <div class="hourly-bar">
+    <p>your hourly weather</p>
+  </div>
+    
+  <div class="carousel-wrapper">
+
+    <div class="hour-header-parent">
+      <p class="hour-header">hourly weather</p>
+      <div class="line"></div>
+    </div>
+  
+    <div class="hour-container">
+        <div class="tfour_hours">
+            <span class="default-msg">click the button at the top!</span>
+        </div>
+
+        <div class="btn-container">
+            <button class="previous prv-btn"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next nxt-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div> <!--hour contianer-->
+  </div> <!--carousel wrapper-->
+  
+</div> <!--carousel contianer-->
+
+
+<!-- Fourth View: uv info container -->
+<section class="fourth-view">
+
+<div class="uv-bar">
+  <p>about the UV index</p>
+</div>
+
+<div id="uv-info">
+  <div class="uv-wrapper-one">
+    <div class="uv-header-container">
+      <p class="uv-heading">uv index</p>
+      <div class="uv-underline"></div>
+    </div>
+  </div>
+
+ <div class="uv-wrapper-two">
+  <div class="uv-flex">
+  <div class="low-container">
+    <img src="./uv-index/low.png" alt="sun image" class="low-icon">
+    <div class="low-description">
+      <p class="letter">low</p>
+      <p class="green">green</p>
+      <p class="number">(0-2)</p>
+    </div>
+    <div class="uv-btn-container">
+      <button class="toggle-btn" type="button" data-id=".low-list"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="low-instruct instruct">
+        <ul class="low-list list">
+          <li>sunscreen</li>
+          <li>sunglasses</li>
+        </ul>
+    </div> <!--instruction div-->
+  </div> <!--main container-->
+
+  <div class="medium-container">
+    <img src="./uv-index/medium.png" alt="sun image" class="medium-icon">
+    <div class="medium-description">
+      <p class="letter">medium</p>
+      <p class="yellow">yellow</p>
+      <p class="number">(3-5)</p>
+    </div>
+    <div class="uv-btn-container">
+      <button class="toggle-btn" type="button" data-id=".medium-list"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="medium-instruct instruct">
+      <ul class="medium-list list">
+        <li>sunscreen</li>
+        <li>sunglasses</li>
+        <li>hat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="high-container">
+    <img src="./uv-index/high.png" alt="sun image" class="high-icon">
+    <div class="high-description">
+      <p class="letter">high</p>
+      <p class="orange">orange</p>
+      <p class="number">(6-7)</p>
+    </div>
+    <div class="uv-btn-container">
+      <button class="toggle-btn" type="button" data-id=".high-list"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="high-instruct instruct">
+      <ul class="high-list list">
+        <li>sunscreen</li>
+        <li>sunglasses</li>
+        <li>hat</li>
+        <li>shade</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="very-high-container">
+    <img src="./uv-index/very-high.png" alt="sun image" class="very-high-icon">
+    <div class="very-high-description">
+      <p class="letter">very high</p>
+      <p class="red">red</p>
+      <p class="number">(8-10)</p>
+    </div>
+    <div class="uv-btn-container">
+      <button class="toggle-btn" type="button" data-id=".very-high-list"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="very-high-instruct instruct">
+      <ul class="very-high-list list">
+        <li>sunscreen</li>
+        <li>sunglasses</li>
+        <li>hat</li>
+        <li>shade</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="extremely-high-container">
+    <img src="./uv-index/extreme.png" alt="sun image" class="extremely-high-icon">
+    <div class="extremely-high-description">
+      <p class="letter">extreme</p>
+      <p class="purple">purple</p>
+      <p class="number">(11+)</p>
+    </div>
+    <div class="uv-btn-container">
+      <button class="toggle-btn" type="button" data-id=".extremely-high-list"><i class="fa-solid fa-arrow-down"></i></button>
+    </div>
+    <div class="extreme-instruct instruct">
+      <ul class="extremely-high-list list">
+        <li>sunscreen</li>
+        <li>sunglasses</li>
+        <li>hat</li>
+        <li>shade</li>
+        <li>staying indoors between 10am - 4pm</li>
+      </ul>
+    </div>
+  </div> <!--extrmely high container-->
+</div> <!--uv flex contianer-->
+
+</div> <!--uv wrapper two-->
+</div> <!--uv info section-->
+
+</section> <!--fourth view end-->
+
+     <a class="scroll-link top-link" href="#home">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+<footer> <!-- grid-->
+  <div class="color-wrapper">
+    
+  <div class="form-parent"> <!-- flex -->
+    <!-- item one -->
+    <form action="/submit" method="POST" class="form" netlify>
+      <label for="email" class="form-email">Email:</label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="Stay in touch" class="form-input">
+      <button type="submit" class="form-btn">Submit</button>
+    </form>
+    <!-- success message -->
+    <div class="success-msg"><p>Thank you</p></div>
+    <!-- item two -->
+    <div class="contact-me">
+      <p>
+        Contact me on my <a href="mailto:urooba.codes@gmail.com?subject=Hello%20there&body=I%20would%20like%20to%20know...">Email</a>,
+        <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank">LinkedIn</a> and <a href="https://dev.to/uroobacodes" target="_blank">Dev.to profile</a>
+      </p> 
+    </div>
+  </div> <!-- form parent end-->
+
+
+  <div class="urooba-codes"> <!-- flex -->
+    <div class="icon-container"> <!--flex-->
+      <a href="https://www.linkedin.com/in/uroobacodes/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://dev.to/uroobacodes" target="_blank"><i class="fa-brands fa-dev"></i></a>
+    </div>
+    <div class="trademark">
+      <p>uroobaCodes&trade; <span class="date-year">2024</span></p>
+  </div>
+
+</div>
+</footer>
+
+      </body>
+    <!-- <script type='module' src="main.js"></script> -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
+
