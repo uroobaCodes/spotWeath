@@ -86,16 +86,13 @@ async function fetchWeatherData() {
   const latitude = params.get("lat");
   const longitude = params.get("lon");
   try {
-    const response = await fetch(
-      "http://localhost:8888/.netlify/functions/getData",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ latitude, longitude }),
-      }
-    );
+    const response = await fetch("/.netlify/functions/getData", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ latitude, longitude }),
+    });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch data: ${response.statusText}`);

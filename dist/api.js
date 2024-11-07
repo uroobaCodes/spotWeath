@@ -24,14 +24,11 @@ const apiModule = (() => {
     longSpan.innerHTML = `${longitude}`;
 
     try {
-      const response = await fetch(
-        "http://localhost:8888/.netlify/functions/getData",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ latitude, longitude }),
-        }
-      ); //fetch ends here
+      const response = await fetch("/.netlify/functions/getData", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ latitude, longitude }),
+      }); //fetch ends here
 
       if (!response.ok) {
         throw new Error(`Failed to fetch data, status: ${response.status}`);
