@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "echo 'No build required'",
     "dev": "netlify dev"
   },
   "dependencies": {
