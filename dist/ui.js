@@ -246,7 +246,6 @@ const uiModule = (() => {
     handleScroll,
     uvDisplay,
     closeListsOnScroll,
-    formSubmission,
   };
 })(); //IIFE (Immediately Invoked Function Expression)
 
@@ -260,5 +259,4 @@ export const {
   handleScroll,
   uvDisplay,
   closeListsOnScroll,
-  formSubmission,
 } = uiModule;
