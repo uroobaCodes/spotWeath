@@ -7,7 +7,6 @@ import {
   navAndToggle,
   uvDisplay,
   closeListsOnScroll,
-  formSubmission,
 } from "./ui.js";
 
 import apiModule from "./api.js";
