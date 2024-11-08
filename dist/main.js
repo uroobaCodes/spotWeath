@@ -26,9 +26,11 @@ window.addEventListener("scroll", handleScroll);
 //ui Module
 toggleNav();
 uvDisplay();
-formSubmission();
+// formSubmission();
+// comment out form submission because netlify will do this on its own
 
 //api module
+// commented this out because it was constantly asking location without clicking the button
 // apiModule.geoFindMe();
 apiModule.currentTime();
 apiModule.currentWeather();
