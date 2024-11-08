@@ -221,7 +221,7 @@ const uiModule = (() => {
     const successMsg = document.querySelector(".success-msg");
 
     form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Prevents the page from reloading or navigating
+      // event.preventDefault(); // Prevents the page from reloading or navigating
       successMsg.classList.add("show");
       setTimeout(() => {
         successMsg.classList.remove("show");
@@ -232,7 +232,7 @@ const uiModule = (() => {
 
       // Temporarily disabling form submission for local testing
       // form.submit(); (comment this out until you connect Netlify)
-      form.submit();
+      // form.submit();
     });
   }
 
