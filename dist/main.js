@@ -1,4 +1,5 @@
 import {
+  showModal,
   toggleNav,
   handleFOUC,
   coordinatesMargin,
@@ -10,6 +11,11 @@ import {
 } from "./ui.js";
 
 import apiModule from "./api.js";
+
+// call the show modal when all of the dom content has been loaded
+document.addEventListener("DOMContentLoaded", () => {
+  showModal();
+});
 
 window.addEventListener("resize", handleFOUC);
 document.addEventListener("DOMContentLoaded", handleFOUC);

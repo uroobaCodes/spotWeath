@@ -6,6 +6,32 @@ const uiModule = (() => {
   const links = document.querySelector(".links");
   const myCoordinates = document.querySelector(".my-coordinates");
 
+  function showModal() {
+    const modal = document.querySelector(".modal-overlay");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Check if the modal has been shown before in this session
+    if (!sessionStorage.getItem("modalShown")) {
+      // Show modal after 1 second
+      setTimeout(() => {
+        modal.classList.add("open-modal");
+      }, 1000);
+
+      // Set the flag in sessionStorage to mark the modal as shown
+      sessionStorage.setItem("modalShown", "true");
+    }
+
+    // Add event listener to close the modal when the close button is clicked
+    closeBtn.addEventListener("click", () => {
+      modal.classList.remove("open-modal");
+      // Hide modal with a delay to prevent it from immediately disappearing
+      setTimeout(() => {
+        modal.style.visibility = "hidden";
+        modal.style.zIndex = "-10";
+      }, 500);
+    });
+  }
+
   function toggleNav() {
     navToggle.addEventListener("click", () => {
       const linksHeight = links.getBoundingClientRect().height;
@@ -211,6 +237,7 @@ const uiModule = (() => {
   }
 
   return {
+    showModal,
     toggleNav,
     adjustCoordinatesPosition,
     handleFOUC,
@@ -224,6 +251,7 @@ const uiModule = (() => {
 })(); //IIFE (Immediately Invoked Function Expression)
 
 export const {
+  showModal,
   toggleNav,
   adjustCoordinatesPosition,
   handleFOUC,

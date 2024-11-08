@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -17,11 +17,11 @@ body {
 :root {
   --ff-primary: "Nunito", sans-serif;
   --clr-blue: #162239;
-  --clr-green: #1CA380;
-  --clr-yellow: #F1C40F;
-  --clr-orange: #E67E22;
-  --clr-red: #E74C3C;
-  --clr-purple: #8E44AD;
+  --clr-green: #1ca380;
+  --clr-yellow: #f1c40f;
+  --clr-orange: #e67e22;
+  --clr-red: #e74c3c;
+  --clr-purple: #8e44ad;
   --clr-accent: #4b7fb6;
   --clr-accentRGB: rgb(75, 127, 182);
   --clr-text: #9491af;
@@ -57,6 +57,93 @@ header {
   transition: all 0.5s linear;
 }
 
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(22, 34, 57, 0.587);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: all 0.5s linear;
+  z-index: 500;
+  visibility: hidden;
+  z-index: -10;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-container {
+  background-color: rgba(1, 6, 11, 0.941);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 90vw;
+  height: 30vh;
+  max-width: 60vw;
+  font-family: var(--ff-primary);
+  color: var(--clr-text);
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 500px) {
+  .modal-container {
+    max-width: 45vw;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  background: transparent;
+  border-color: transparent;
+  padding: 5px;
+  color: darkred;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.close-btn:hover {
+  color: lightcoral;
+  transform: scale(1.3);
+}
+
+@media screen and (min-width: 500px) {
+  .close-btn {
+    padding: 10px;
+  }
+}
+
+.modal-container-heading {
+  margin: 0;
+}
+
+.modal-container-para {
+  padding: 0;
+  margin: 0;
+}
+
+.hyperlink {
+  color: var(--clr-lightText);
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* NavBar */
 
 nav {
@@ -66,7 +153,7 @@ nav {
   /* position: fixed; */
   z-index: 4;
 }
-  
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -92,9 +179,9 @@ nav {
 }
 
 @media screen and (min-width: 600px) {
-    .logo {
+  .logo {
     height: 30px;
-    }
+  }
 }
 
 .links-container {
@@ -120,7 +207,7 @@ nav {
   padding: 0.563rem 0;
 }
 .links a:hover {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 @media screen and (min-width: 800px) {
@@ -187,7 +274,7 @@ nav {
   visibility: visible;
   z-index: 100;
 }
-  
+
 @keyframes bounce {
   0% {
     transform: scale(0.5);
@@ -231,14 +318,14 @@ nav {
 .long {
   display: inline-block;
   padding: 0.2rem;
-  border: 2px solid var(--clr-text); 
+  border: 2px solid var(--clr-text);
   border-radius: 4px;
-  color: white; 
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
-  font-size: 0.75rem; 
-  font-family: var(--ff-primary); 
+  color: white;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.75rem;
+  font-family: var(--ff-primary);
   width: 90%;
-  text-align: center; 
+  text-align: center;
 }
 
 .container p {
@@ -257,10 +344,10 @@ nav {
 }
 
 .container .address {
-  border: 2px solid var(--clr-text); 
+  border: 2px solid var(--clr-text);
   border-radius: 4px;
-  color: white; 
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
+  color: white;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   width: 96%;
   padding: 0.75rem;
@@ -333,14 +420,14 @@ nav {
   /* padding: 20px 10px; */
   justify-self: center;
 
-  display: flex;               
-  justify-content: center;      
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
   box-sizing: border-box;
 }
-  
+
 .sticky-bar p {
   font-family: var(--ff-primary);
   font-size: 1rem;
@@ -405,7 +492,7 @@ nav {
 
 .underline {
   border-top: 2px solid var(--clr-lightText);
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 /* this is where small and large containers are styled */
@@ -602,7 +689,7 @@ nav {
     font-size: 0.875rem;
   }
   .value p {
-    font-size:  0.875rem;
+    font-size: 0.875rem;
   }
   .uv-text p {
     font-size: 0.875rem;
@@ -618,7 +705,7 @@ nav {
   .sticky-bar p {
     font-size: 2rem;
   }
- 
+
   .condition-num p {
     font-size: 3.2rem;
     margin-right: 10px;
@@ -628,7 +715,7 @@ nav {
   }
 }
 
-  /* this is for map container, it is completely seperate */
+/* this is for map container, it is completely seperate */
 .map-parent {
   margin-top: 20px;
   height: 97%;
@@ -640,7 +727,7 @@ nav {
   width: 100%;
 }
 
-  /* changing the display of second view to flex */
+/* changing the display of second view to flex */
 @media screen and (min-width: 1000px) {
   .today-weather-parent {
     height: 100%;
@@ -681,7 +768,7 @@ nav {
   }
 }
 
-  /* here comes the carousel */
+/* here comes the carousel */
 .carousel-container {
   width: 100%;
   min-height: 50vh;
@@ -701,9 +788,9 @@ nav {
   margin: 1rem 0;
   justify-self: center;
 
-  display: flex;               
-  justify-content: center;      
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 
   box-sizing: border-box;
@@ -770,7 +857,7 @@ nav {
   overflow: hidden;
 }
 
-.tfour_hours{
+.tfour_hours {
   height: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -814,7 +901,7 @@ nav {
 @media screen and (min-width: 500px) {
   .child {
     margin-right: 10px;
-    width: calc(100% / 3 - 10px); 
+    width: calc(100% / 3 - 10px);
     box-sizing: border-box;
   }
 }
@@ -837,7 +924,6 @@ nav {
   z-index: 10;
 }
 
-
 /* fourth view and UV container */
 .fourth-view {
   width: 100%;
@@ -848,7 +934,6 @@ nav {
   grid-template-rows: auto auto;
   justify-items: center;
 }
-
 
 #uv-info {
   display: grid;
@@ -869,8 +954,8 @@ nav {
   width: 90%;
   color: var(--clr-lightText);
 
-  display: flex;               
-  align-items: center; 
+  display: flex;
+  align-items: center;
   box-sizing: border-box;
 }
 
@@ -918,19 +1003,19 @@ nav {
   display: grid;
   grid-template-rows: auto auto auto 1fr;
 
-  min-width: 50%; 
+  min-width: 50%;
   padding: 5px;
   box-sizing: border-box;
 }
 
 @media screen and (min-width: 600px) {
   .low-container,
-.medium-container,
-.high-container,
-.very-high-container,
-.extremely-high-container {
-  min-width: 20%; 
-}
+  .medium-container,
+  .high-container,
+  .very-high-container,
+  .extremely-high-container {
+    min-width: 20%;
+  }
 }
 
 .low-icon,
@@ -1031,7 +1116,7 @@ nav {
   padding: 0;
   margin: 0;
   border: transparent;
-  background-color: transparent; 
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -1062,12 +1147,11 @@ nav {
   transition: var(--transition);
 }
 
-
 .low-list,
 .medium-list,
 .high-list,
 .very-high-list,
-.extremely-high-list  {
+.extremely-high-list {
   padding: 0;
   margin-top: 0;
   transition: var(--transition);
@@ -1089,7 +1173,6 @@ nav {
 }
 
 @media screen and (min-width: 700px) {
-  
   #uv-info {
     display: grid;
     min-height: 20vh;
@@ -1123,9 +1206,9 @@ nav {
   .high-icon,
   .very-high-icon,
   .extremely-high-icon {
-  width: calc(20px + 3vw);
-  height: calc(20px + 3vw);
-  margin: 5px 0;
+    width: calc(20px + 3vw);
+    height: calc(20px + 3vw);
+    margin: 5px 0;
   }
   .low-instruct {
     border-bottom-left-radius: 1.25rem;
@@ -1146,7 +1229,6 @@ footer {
   height: 40vh;
   width: 100%;
   margin-top: 200px;
-
 }
 
 .color-wrapper {
@@ -1155,11 +1237,15 @@ footer {
   display: grid;
   grid-template-rows: 2fr 1fr;
 
-  background: linear-gradient(0.25turn, rgba(72, 33, 1, 0.486), rgba(52, 24, 0, 0.5), rgba(19, 8, 0, 0.5));
+  background: linear-gradient(
+    0.25turn,
+    rgba(72, 33, 1, 0.486),
+    rgba(52, 24, 0, 0.5),
+    rgba(19, 8, 0, 0.5)
+  );
   opacity: 0.9;
   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.356);
 }
-
 
 form {
   padding: 0 3px;
@@ -1182,7 +1268,7 @@ form {
 
 .form-input {
   width: 130px;
-  padding: 2px 5px; 
+  padding: 2px 5px;
   font-family: var(--ff-primary);
   font-size: 0.5rem;
 
@@ -1197,13 +1283,13 @@ form {
   transition: all 0.5s;
   position: relative;
   z-index: 2;
-  padding: 2px 5px; 
-  border: none; 
-  background-color: transparent; 
+  padding: 2px 5px;
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 .form-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1218,7 +1304,7 @@ form {
   transform: scale(0.5, 0.5);
 }
 .form-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1227,7 +1313,7 @@ form {
   z-index: 1;
   opacity: 0;
   transition: all 0.3s;
-  border: 1px solid rgba(255,255,255,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   transform: scale(1.2, 1.2);
 }
 .form-btn:hover::after {
@@ -1263,7 +1349,7 @@ form {
 
 .success-msg.show {
   display: block;
-  max-height: 37px;  
+  max-height: 37px;
   opacity: 0.8;
 }
 
@@ -1323,9 +1409,8 @@ form {
   padding-right: 10px;
 }
 
-
 .trademark p {
- font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .date-year {
@@ -1338,50 +1423,50 @@ form {
   form {
     padding: 0 10px;
   }
-  
+
   .form-email {
-  font-size: 1rem;
+    font-size: 1rem;
   }
   .form-input {
     width: 170px;
-    padding: 5px 7px; 
+    padding: 5px 7px;
     font-size: 1rem;
   }
-  
+
   .form-btn {
     font-size: 1rem;
-    padding: 5px 7px; 
+    padding: 5px 7px;
   }
-  
+
   .contact-me {
     padding-right: 10px;
   }
-  
+
   .contact-me p {
     font-size: 0.875rem;
   }
-  
+
   .contact-me p a {
     font-size: 0.875rem;
   }
-  
+
   .icon-container {
     padding: 0 10px;
     width: 100px;
   }
-  
+
   .icon-container .fa-linkedin-in {
     font-size: 1rem;
   }
-  
+
   .icon-container .fa-dev {
     font-size: 1.5rem;
   }
-  
+
   .trademark p {
-   font-size: 1rem;
+    font-size: 1rem;
   }
-  
+
   .date-year {
     font-size: 1rem;
   }
@@ -1394,9 +1479,8 @@ form {
   .contact-me p {
     font-size: 1rem;
   }
-  
+
   .contact-me p a {
     font-size: 1rem;
   }
 }
-
