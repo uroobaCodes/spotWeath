@@ -33,7 +33,7 @@ uvDisplay();
 // apiModule.geoFindMe();
 apiModule.currentTime();
 apiModule.currentWeather();
-apiModule.weather();
+// apiModule.weather();
 apiModule.createHours();
 apiModule.main();
 
