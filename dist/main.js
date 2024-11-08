@@ -1,12 +1,21 @@
-import { toggleNav, handleFOUC, coordinatesMargin, handleScroll, navAndToggle, uvDisplay, closeListsOnScroll, formSubmission } from './ui.js';
+import {
+  toggleNav,
+  handleFOUC,
+  coordinatesMargin,
+  handleScroll,
+  navAndToggle,
+  uvDisplay,
+  closeListsOnScroll,
+  formSubmission,
+} from "./ui.js";
 
-import apiModule from './api.js';
+import apiModule from "./api.js";
 
-window.addEventListener('resize', handleFOUC);
-document.addEventListener('DOMContentLoaded', handleFOUC);
-window.addEventListener('scroll', navAndToggle);
-window.addEventListener('resize', coordinatesMargin);
-window.addEventListener('scroll',  handleScroll);
+window.addEventListener("resize", handleFOUC);
+document.addEventListener("DOMContentLoaded", handleFOUC);
+window.addEventListener("scroll", navAndToggle);
+window.addEventListener("resize", coordinatesMargin);
+window.addEventListener("scroll", handleScroll);
 
 //ui Module
 toggleNav();
@@ -14,7 +23,7 @@ uvDisplay();
 formSubmission();
 
 //api module
-apiModule.geoFindMe();
+// apiModule.geoFindMe();
 apiModule.currentTime();
 apiModule.currentWeather();
 apiModule.weather();

@@ -284,6 +284,8 @@ const apiModule = (() => {
     btn.addEventListener("click", geoFindMe);
   }
 
+  main();
+
   return {
     geoFindMe,
     currentTime,
