@@ -1,9 +1,9 @@
 # 🔍 About SpotWeath
 I built this project from scratch. I am not following any tutorial and I was on my own. I practiced a lot with codecademy and freecodecamp. I simply started building on my computer first because I had no idea we can build using a Vite setup as well. But this was a great learning process. The APIs used in this app are: 
-1- LocationIQ (for reverse geocoding)
-2- weatherAPI
-3- JavaScript Leaflet library
-4- Geolocation web api (for coordinates)
+1. LocationIQ (for reverse geocoding)
+2. WeatherAPI
+3. JavaScript Leaflet library
+4. Geolocation web api (for coordinates)
 
 # 📜 Key Learning Points:
 
